@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/listClubFragment">
+    <fragment
+        android:id="@+id/listClubFragment"
+        android:name="com.example.fauzi_chalange_chapter3.listclub.ListClubFragment"
+        android:label="ListClubFragment" >
+        <action
+            android:id="@+id/action_listClubFragment_to_listPemainFragment"
+            app:destination="@id/listPemainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listPemainFragment"
+        android:name="com.example.fauzi_chalange_chapter3.listclub.ListPemainFragment"
+        android:label="ListPemainFragment" >
+        <argument
+            android:name="nama"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+
+</navigation>
