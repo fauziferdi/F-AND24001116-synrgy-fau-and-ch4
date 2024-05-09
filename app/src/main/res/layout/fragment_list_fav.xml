@@ -4,33 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
         <com.google.android.material.progressindicator.LinearProgressIndicator
             android:id="@+id/progress_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             android:indeterminate="true"/>
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_to_fav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginRight="20px"
-            android:text="Ke Favorite"
-
-            />
-
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
-            android:layout_width="412dp"
-            android:layout_height="634dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_to_fav"
+            tools:layout_editor_absoluteY="0dp"
             tools:listitem="@layout/club_list" />
 
 

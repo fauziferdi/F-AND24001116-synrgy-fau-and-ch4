@@ -3,14 +3,15 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("kotlin-parcelize")
     id("androidx.navigation.safeargs")
+    id("com.google.devtools.ksp")
 }
 
 android {
-    namespace = "com.example.fauzi_chalange_chapter3"
+    namespace = "com.example.fauzi_chalange_chapter4"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.fauzi_chalange_chapter3"
+        applicationId = "com.example.fauzi_chalange_chapter4"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
@@ -37,6 +38,11 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding = true
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.11"
     }
 }
 
@@ -49,7 +55,19 @@ dependencies {
     implementation(libs.navigation.ui.ktx)
     implementation(libs.coil)
     implementation(libs.androidx.swiperefreshlayout)
+
     testImplementation(libs.junit)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.material)
+    implementation(libs.compose.ui.preview)
+    implementation(libs.compose.ui.tooling)
+    implementation(libs.compose.activity)
+
+    implementation(libs.room)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
 }
